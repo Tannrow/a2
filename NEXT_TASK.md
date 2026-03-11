@@ -1,1 +1,1 @@
-BLOCKED: all approved Phase 01 tasks are complete; human approval and a next approved task are required before crossing the phase boundary.
+BLOCKED: Phase 02 task 01 is complete; a next approved task is required before continuing within Phase 02 or advancing phases.

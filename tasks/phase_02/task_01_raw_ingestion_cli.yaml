@@ -1,0 +1,36 @@
+id: phase02-task01
+title: Establish deterministic raw ingestion CLI
+phase: 02 raw ingestion
+objective: Create the first approved Phase 02 task for deterministic end-of-day raw data ingestion with provenance tracking.
+inputs:
+  - docs/CURRENT_PHASE.md
+  - docs/PHASES/02_ingestion.md
+  - docs/ARCHITECTURE.md
+  - docs/CONTRACTS/*.md
+outputs:
+  - scripts/ingest_raw.sh
+  - data/raw/
+  - docs/CONTRACTS/raw_landing_schema.md
+allowed_paths:
+  - scripts/**
+  - data/raw/**
+  - docs/CONTRACTS/**
+  - tasks/phase_02/task_01_raw_ingestion_cli.yaml
+  - STATUS.md
+  - NEXT_TASK.md
+forbidden_paths:
+  - src/**
+  - data/snapshots/**
+  - data/features/**
+  - notebooks/**
+commands:
+  - ./scripts/ingest_raw.sh --date YYYY-MM-DD
+  - find data/raw -type f
+acceptance:
+  - Ingestion run reproducibly fetches raw end-of-day data and writes checksummed files.
+  - Provenance records source, fetch time, parameters, and checksum.
+  - Raw data is stored without transformation beyond minimal validation.
+  - Outputs stay within Phase 02 allowed paths.
+stop_conditions:
+  - Need to implement snapshots, features, classification, scoring, ML, reporting, dashboards, or orchestration.
+  - Source access or deterministic fetch requirements are unclear.
