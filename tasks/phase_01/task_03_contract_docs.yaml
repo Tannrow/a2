@@ -1,0 +1,28 @@
+id: phase01-task03
+title: Define data contracts and ADRs
+phase: 01 foundation and contracts
+objective: Document schemas for snapshots, features, setups, scores, hypotheses, and predictions plus supporting ADRs.
+inputs:
+  - docs/ARCHITECTURE.md
+  - docs/ROADMAP.md
+outputs:
+  - docs/CONTRACTS/*.md
+  - docs/DECISIONS/*.md
+allowed_paths:
+  - docs/CONTRACTS/**
+  - docs/DECISIONS/**
+  - tasks/phase_01/task_03_contract_docs.yaml
+forbidden_paths:
+  - src/**
+  - data/**
+  - notebooks/**
+commands:
+  - ls docs/CONTRACTS
+  - ls docs/DECISIONS
+acceptance:
+  - Contracts define purpose, required/optional fields, determinism notes, example JSON, and validation expectations.
+  - ADRs 0001-0005 exist with status, context, decision, and consequences.
+  - No implementation code added.
+stop_conditions:
+  - Requests to implement schemas in code or build storage.
+  - Phase/task conflicts noted in CURRENT_PHASE.

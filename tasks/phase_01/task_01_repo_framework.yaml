@@ -1,0 +1,35 @@
+id: phase01-task01
+title: Establish repository execution framework
+phase: 01 foundation and contracts
+objective: Create constitution, governance, and status/task scaffolding for the project.
+inputs:
+  - problem statement
+  - AGENTS and phase constraints
+outputs:
+  - AGENTS.md
+  - docs/CURRENT_PHASE.md
+  - TASKS.md
+  - NEXT_TASK.md
+  - STATUS.md
+allowed_paths:
+  - AGENTS.md
+  - docs/CURRENT_PHASE.md
+  - TASKS.md
+  - NEXT_TASK.md
+  - STATUS.md
+  - tasks/phase_01/task_01_repo_framework.yaml
+  - README.md
+forbidden_paths:
+  - src/**
+  - data/**
+  - notebooks/**
+commands:
+  - ls
+  - cat AGENTS.md
+acceptance:
+  - Files exist with content aligned to scope and constraints.
+  - NEXT_TASK points to this task path.
+  - No product feature code added.
+stop_conditions:
+  - Request to build ingestion/features/scoring or UI.
+  - Phase conflict with docs/CURRENT_PHASE.md.

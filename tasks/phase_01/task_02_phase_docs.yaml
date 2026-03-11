@@ -1,0 +1,28 @@
+id: phase01-task02
+title: Draft roadmap and phase detail docs
+phase: 01 foundation and contracts
+objective: Provide roadmap and per-phase guidance with gates and artifacts.
+inputs:
+  - docs/ARCHITECTURE.md
+  - docs/CURRENT_PHASE.md
+outputs:
+  - docs/ROADMAP.md
+  - docs/PHASES/*.md
+allowed_paths:
+  - docs/ROADMAP.md
+  - docs/PHASES/**
+  - tasks/phase_01/task_02_phase_docs.yaml
+forbidden_paths:
+  - src/**
+  - data/**
+  - notebooks/**
+commands:
+  - ls docs/PHASES
+  - cat docs/ROADMAP.md
+acceptance:
+  - Roadmap lists phases 01-10 in order with goals, artifacts, checkpoints, and exclusions.
+  - Each phase doc includes objective, scope, inputs, outputs, artifact, acceptance, commands, do-not-build-yet, paths, and failure modes.
+  - Content aligns with CURRENT_PHASE and ADRs.
+stop_conditions:
+  - Requests to implement phase logic.
+  - Conflicts with CURRENT_PHASE boundaries.
