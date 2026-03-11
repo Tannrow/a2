@@ -5,5 +5,5 @@ Private, CLI-first ticker intelligence and trade-probability system. v1 is end-o
 ## Where to Start
 - Read `AGENTS.md` for constitution and constraints.
 - See `docs/CURRENT_PHASE.md` for active scope (Phase 01 - Foundation and contracts).
-- Execute the task in `NEXT_TASK.md` to continue.
+- Check `NEXT_TASK.md` for the next task or an explicit blocker before continuing.
 - Architecture and roadmap live under `docs/`.

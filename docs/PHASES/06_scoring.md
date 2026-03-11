@@ -14,25 +14,25 @@ Apply scoring rules/weights to setups, generate hypotheses with rationale, and l
 ## Outputs
 - Scored setups and trade hypotheses with explanations and metadata
 
-## Working Artifact
+## Artifact
 CLI that scores setups and emits hypotheses conforming to `score_schema` and `trade_hypothesis_schema`.
 
-## Acceptance Criteria
+## Acceptance
 - Scores reproducible given identical inputs and weights.
 - Hypotheses include supporting factors and confidence rationale.
 - No-trade outcomes preserved and propagated.
 
-## Example Commands
+## Commands
 - `./scripts/score_setups.sh --date YYYY-MM-DD`
 - `duckdb :memory: "SELECT AVG(score) FROM 'data/scores/*.parquet'"`
 
 ## Do Not Build Yet
 LLM-based scoring, auto-execution, reporting, or orchestration.
 
-## Likely Paths Touched
+## Allowed Paths
 `scripts/`, `data/scores/`, `data/hypotheses/`, `docs/CONTRACTS/score_schema.md`, `docs/CONTRACTS/trade_hypothesis_schema.md`, `docs/PHASES/06_scoring.md`
 
-## Common Failure Modes
+## Failure Modes
 - Weight changes without versioning.
 - Scores not aligned with documented factors.
 - Dropping no-trade cases or missing rationale fields.
