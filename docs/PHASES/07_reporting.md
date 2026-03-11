@@ -14,25 +14,25 @@ Generate reports that synthesize outputs; optional static charts; LLM allowed on
 ## Outputs
 - Report bundle (text/markdown) and static chart files
 
-## Working Artifact
+## Artifact
 CLI that assembles report and chart pack from prior outputs.
 
-## Acceptance Criteria
+## Acceptance
 - Reports cite data sources, scores, hypotheses, and no-trade cases.
 - Static assets are reproducible; no live dashboards.
 - LLM usage, if any, is constrained to summarization of provided data.
 
-## Example Commands
+## Commands
 - `./scripts/generate_report.sh --date YYYY-MM-DD`
 - `ls reports/YYYY-MM-DD/`
 
 ## Do Not Build Yet
 Interactive dashboards, web UI, live data fetching, orchestration scheduling.
 
-## Likely Paths Touched
+## Allowed Paths
 `scripts/`, `reports/`, `docs/PHASES/07_reporting.md`
 
-## Common Failure Modes
+## Failure Modes
 - Allowing interactive UI creep.
 - Reports lacking traceability to inputs.
 - Non-deterministic chart generation.

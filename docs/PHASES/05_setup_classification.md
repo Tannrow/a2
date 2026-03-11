@@ -14,25 +14,25 @@ Rule-based classifiers that consume features, apply gating, and emit labeled set
 ## Outputs
 - Labeled setups and no-trade records with rationale and metadata
 
-## Working Artifact
+## Artifact
 CLI that reads features, applies classification and no-trade gating, and writes labeled outputs conforming to `setup_schema`.
 
-## Acceptance Criteria
+## Acceptance
 - Classifications repeatable with identical inputs.
 - No-trade outputs are logged with reasons.
 - Rationale captured per label for auditability.
 
-## Example Commands
+## Commands
 - `./scripts/classify_setups.sh --date YYYY-MM-DD`
 - `duckdb :memory: "SELECT label, COUNT(*) FROM 'data/setups/*.parquet' GROUP BY 1"`
 
 ## Do Not Build Yet
 Scoring, trade hypothesis generation, ML, reporting, or orchestration.
 
-## Likely Paths Touched
+## Allowed Paths
 `scripts/`, `data/setups/`, `docs/CONTRACTS/setup_schema.md`, `docs/PHASES/05_setup_classification.md`
 
-## Common Failure Modes
+## Failure Modes
 - Gating rules ignored or inconsistently applied.
 - Missing rationale fields for labels/no-trade decisions.
 - Hidden stochastic elements creeping into classification.
