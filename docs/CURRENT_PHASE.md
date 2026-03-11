@@ -1,10 +1,10 @@
 # Current Phase
 
-**Phase 01 - Foundation and contracts**
+**Phase 02 - Raw Ingestion**
 
-- Phase goal: establish governance, architecture, contracts, and task system to guide future phases.
-- Allowed objectives: create/update constitution, architecture overview, roadmap, phase docs, contracts, ADRs, task/status files, and minimal README guidance.
-- Required artifact: repository execution framework (docs + tasks) and clear repo skeleton plan; no product features.
-- Exit checkpoint: all required framework files present and consistent; NEXT_TASK points to first actionable task; acceptance criteria in tasks and phase docs are clear; no feature code added.
-- Forbidden right now: implementing ingestion, snapshot, features, classification, scoring, reporting, ML, UI, intraday, auto-trading, vector DBs, dashboards, or agent frameworks.
-- Codex behavior: stay inside phase scope and current task; stop if asked to implement later-phase work; prefer small changes with explicit acceptance; maintain clarity and determinism.
+- Phase goal: create deterministic end-of-day raw data ingestion with provenance tracking.
+- Allowed objectives: fetch raw market data from configured sources, store it with checksums and metadata, and log source details with minimal validation only.
+- Required artifact: a CLI command that fetches and stores raw data to a controlled directory with logs.
+- Exit checkpoint: ingestion runs reproducibly, writes checksummed raw files, records provenance, and avoids transformations beyond minimal validation.
+- Forbidden right now: canonical snapshots, feature generation, classification, scoring, ML, dashboards, orchestration, intraday, auto-trading, vector databases, or agent frameworks.
+- Codex behavior: stay inside Phase 02 scope and the single task in NEXT_TASK.md; keep changes deterministic and auditable; stop if asked to implement later-phase work.

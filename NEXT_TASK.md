@@ -1,1 +1,1 @@
-BLOCKED: all approved Phase 01 tasks are complete; human approval and a next approved task are required before crossing the phase boundary.
+tasks/phase_02/task_01_raw_ingestion_cli.yaml
