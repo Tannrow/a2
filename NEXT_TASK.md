@@ -1,1 +1,1 @@
-tasks/phase_01/task_01_repo_framework.yaml
+tasks/phase_01/task_02_phase_docs.yaml
